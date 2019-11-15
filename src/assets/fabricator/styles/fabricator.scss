@@ -10,6 +10,7 @@ $settings: (
 	menu-width: 14rem
 );
 
+// PARTIALS
 @import 'partials/variables';
 @import 'partials/code';
 @import 'partials/color-chips';
@@ -17,3 +18,5 @@ $settings: (
 @import 'partials/item';
 @import 'partials/layout';
 @import 'partials/menu';
+@import 'partials/responsive';
+@import 'partials/typography';

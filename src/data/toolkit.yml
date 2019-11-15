@@ -1,8 +1,30 @@
 colors:
-  primary:
-    Dark: "rgb(30, 30, 30)"
-    Light: "rgb(242, 242, 242)"
-  secondary:
-    Red: "rgb(201, 55, 6)"
-    Yellow: "rgb(252, 207, 80)"
-    Blue: "rgb(39, 102, 143)"
+  color:
+    White: "rgb(255, 255, 255)"
+    Smoke white: "rgb(246, 246, 246)"
+    Snow white: "rgb(255, 240, 240)"
+    Zircon Grey: "rgb(239, 240, 240)"
+    Shuttle Grey: "rgb(99, 102, 106)"
+    Nero Grey: "rgb(27, 27, 27)"
+    Gallery Grey: "rgb(224, 219, 215)"
+    Chateau Grey: "rgb(161, 163, 165)"
+    Suva Grey: "rgb(136, 136, 136)"
+    Charcoal Grey: "rgb(74, 74, 74)"
+    Black: "rgb(0, 0, 0)"
+    Fire Engine Red: "rgb(209, 36, 32)"
+    Coral Candy Red: "rgb(246, 211, 210)"
+    Falu Red: "rgb(147, 13, 24)"
+    Alizarin Red: "rgb(217, 39, 46)"
+    White Lilac Blue: "rgb(224, 224, 225)"
+    Dodger Blue: "rgb(77, 144, 254)"
+    Maya Blue: "rgb(122, 172, 254)"
+    Dolphin: "rgb(101, 101, 106)"
+    Maire: "rgb(39, 37, 31)"
+    Green: "rgb(4, 134, 0)"
+    Dark Orange: "rgb(255, 128, 0)"
+backgrounds:
+  background:
+    Zircon Grey: "rgb(239, 240, 240)"
+    Shuttle Grey: "rgb(99, 102, 106)"
+    Smoke white: "rgb(246, 246, 246)"
+    Nero Grey: "rgb(27, 27, 27)"
