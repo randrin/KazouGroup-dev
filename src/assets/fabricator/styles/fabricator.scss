@@ -5,24 +5,116 @@
  */
 
 $settings: (
-	theme: light,
-	accent: hsl(0, 0%, 46%),
-	menu-width: 14rem
+  theme: light,
+  accent: hsl(0, 0%, 46%),
+  menu-width: 14rem
 );
 
-// PARTIALS
-@import 'partials/variables';
-@import 'partials/code';
-@import 'partials/color-chips';
-@import 'partials/color-variables';
-@import 'partials/controls';
-@import 'partials/item';
-@import 'partials/layout';
-@import 'partials/menu';
-@import 'partials/responsive';
-@import 'partials/typography';
+// VENDOR
+@import "vendor/foundation";
 
-.kazou-title-overview {
-  text-transform: uppercase;
+// PARTIALS
+@import "partials/variables";
+@import "partials/code";
+@import "partials/color-chips";
+@import "partials/color-variables";
+@import "partials/controls";
+@import "partials/item";
+@import "partials/layout";
+@import "partials/menu";
+@import "partials/responsive";
+@import "partials/typography";
+
+// KAZOUGROUP TITLE
+.kazou-orange-title {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: 1px;
   color: $dark-orange;
+}
+.kazou-red-title {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: $fire-engine-red;
+}
+.kazou-grey-title {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 32px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: $shuttle-grey;
+}
+.kazou-orange-heading {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $dark-orange;
+}
+.kazou-red-heading {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $fire-engine-red;
+}
+.kazou-grey-heading {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $shuttle-grey;
+}
+
+// KAZOUGROUP SUBTITLE
+.kazou-orange-subtitle {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: $dark-orange;
+}
+.kazou-red-subtitle {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: $fire-engine-red;
+}
+.kazou-grey-subtitle {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  color: $shuttle-grey;
+}
+
+// KAZOUGROUP CONTENT
+.kazou-red-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $fire-engine-red;
+}
+.kazou-grey-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $shuttle-grey;
+}
+
+// KAZOUGROUP TOOLS
+.kazou-no-transform {
+  text-transform: none !important;
+}
+.kazou-uppercase {
+  text-transform: uppercase !important;
+}
+.kazou-lowercase {
+  text-transform: lowercase !important;
+}
+.kazou-text-justify {
+  text-align: justify !important;
 }
