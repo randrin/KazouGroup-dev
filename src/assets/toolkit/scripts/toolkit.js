@@ -1,3 +1,3 @@
 /**
- * Toolkit JavaScript
+ * KazouGroup Toolkit JavaScript
  */

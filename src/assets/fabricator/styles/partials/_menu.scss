@@ -47,12 +47,11 @@
 		line-height: 1.5;
 
 		&:hover {
-			color: color(menu-text) !important;
-			text-decoration: underline;
+			color: $dark-orange !important;
 		}
 
 		&.f-active {
-			box-shadow: inset 0.25rem 0 0 0 color(accent);
+			box-shadow: inset 0.25rem 0 0 0 $dark-orange;
 		}
 	}
 

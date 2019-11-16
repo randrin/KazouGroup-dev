@@ -1,39 +1,60 @@
 ---
-title: Overview | Fabricator
+title: KazouGroup Srl | Overview
 fabricator: true
 ---
 
-<h1>Overview</h1>
+<h1 class="kazou-title-overview">Vue d'ensemble</h1>
 
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+<p>Cet outil UI (User Interface) est la gamme des produits de la structure KazouGroup Srl. C'est un système de conception hautement modulaire pour le développement
+  rapide de pages Web. Il contient différents outils, modules et composants pouvant être assemblés dans des mises en page plus complexes.
+</p>
 
-<p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+<p>Ce template contient des exemples de travail, des extraits de code, de la documentation et des directives de style.</p>
 
-<h2>Usage</h2>
+<!-- <h2>Usage</h2>
 
 <p>Start by adding the following files to your page:</p>
 
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
+<pre
+  class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
 
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+<pre
+  class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre> -->
 
 
-<h2>Color</h2>
+<h2>Couleurs</h2>
+<p>Les diffèrents composants de la gamme des produits de KazouGroup Srl utilisent les couleurs suivantes: </p>
 
 {{#each toolkit.colors}}
-	<div class="f-color-chips">
-	{{#each this}}
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
-		</div>
-	{{/each}}
-	</div>
+<div class="f-color-chips">
+  {{#each this}}
+  <div class="f-color-chip">
+    <div class="f-color-chip__name">{{@key}}</div>
+    <div class="f-color-chip__color">{{this}}</div>
+  </div>
+  {{/each}}
+</div>
+{{/each}}
+
+<h2>Fond d'écran (Background Colors)</h2>
+<p>Les diffèrents composants de la gamme des produits de KazouGroup Srl utilisent les fonds d'écran suivants: </p>
+
+{{#each toolkit.backgrounds}}
+<div class="f-color-chips">
+  {{#each this}}
+  <div class="f-color-chip">
+    <div class="f-color-chip__name">{{@key}}</div>
+    <div class="f-color-chip__color">{{this}}</div>
+  </div>
+  {{/each}}
+</div>
 {{/each}}
 
 <h2>Typography</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore
+  consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate
+  reiciendis.</p>
 
 <h1>Heading Level 1</h1>
 <h2>Heading Level 2</h2>
