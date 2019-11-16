@@ -14,9 +14,15 @@ $settings: (
 @import 'partials/variables';
 @import 'partials/code';
 @import 'partials/color-chips';
+@import 'partials/color-variables';
 @import 'partials/controls';
 @import 'partials/item';
 @import 'partials/layout';
 @import 'partials/menu';
 @import 'partials/responsive';
 @import 'partials/typography';
+
+.kazou-title-overview {
+  text-transform: uppercase;
+  color: $dark-orange;
+}
