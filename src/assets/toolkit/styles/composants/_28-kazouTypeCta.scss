@@ -1,0 +1,26 @@
+.kazou-cta-wrapper {
+  margin: 15px 0px;
+  .row:after {
+    padding-bottom: 20px;
+  }
+  .kazou-grey-background {
+    padding: 0 1em;
+    .row .kazou-grey-content {
+      color: $white;
+    }
+    .kazou-button.grey-btn {
+      color: $shuttle-grey;
+      background-color: $white;
+      border: solid 1px $white;
+      &:hover {
+        color: $white;
+        background-image: linear-gradient(to left, $nero-grey, $shuttle-grey);
+        border: 0;
+        padding: 15px 21px;
+      }
+    }
+    .kazou-button.grey-white-btn {
+      border: solid 1px $white;
+    }
+  }
+}
