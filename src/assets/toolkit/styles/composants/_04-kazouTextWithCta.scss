@@ -8,7 +8,10 @@
     letter-spacing: -1px;
   }
   .kazou-container-composant {
-    padding: 0px;
+    padding: 0px 20px;
+    @include medium() {
+      padding: 0px 30px;
+    }
     @include large() {
       padding: 0 100px;
     }

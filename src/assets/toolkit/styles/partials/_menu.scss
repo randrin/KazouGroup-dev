@@ -8,7 +8,7 @@
 	width: $menu-width;
 	height: 100%;
 	z-index: 1;
-	background-color: color(menu-background);
+	background-color: $zircon-grey;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
@@ -39,8 +39,9 @@
 	}
 
 	a {
+    font-family: OpenSans-Regular, sans-serif;
 		display: block;
-		padding: 0.33rem 2rem;
+		padding: 0.33rem 1rem;
 		color: color(menu-text) !important;
 		text-decoration: none;
 		font-size: 0.875rem;
@@ -56,6 +57,7 @@
 	}
 
 	.f-menu__heading {
+    font-family: OpenSans-ExtraBold, sans-serif;
 		padding-left: 1.5rem;
 		font-weight: 700;
 		font-size: 0.875rem;
@@ -64,4 +66,11 @@
 			color: color(normal);
 		}
 	}
+}
+::-webkit-scrollbar-thumb {
+  background-color: $shuttle-grey;
+  border-radius: 15px;
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
