@@ -39,6 +39,20 @@
   color: $shuttle-grey;
 }
 
+// KAZOUGROUP BACKGROUND
+.kazou-zircon-grey-background {
+  background: $zircon-grey !important;
+}
+.kazou-shuttle-grey-background {
+  background: $shuttle-grey !important;
+}
+.kazou-nero-grey-background {
+  background: $nero-grey !important;
+}
+.kazou-smoke-white-background {
+  background: $smoke-white !important;
+}
+
 // KAZOUGROUP SUBTITLE
 .kazou-orange-subtitle {
   font-family: OpenSans-ExtraBold, sans-serif;
@@ -91,8 +105,14 @@
 .kazou-text-justify {
   text-align: justify !important;
 }
-.kazou-grey-background {
-  background: $shuttle-grey;
+.kazou-text-left {
+  text-align: left !important;
+}
+.kazou-text-right {
+  text-align: right !important;
+}
+.kazou-text-center {
+  text-align: center !important;
 }
 
 // KAZOUGROUP BUTTONS
