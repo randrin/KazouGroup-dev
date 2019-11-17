@@ -1,0 +1,24 @@
+.kazou-textWithCta-wrapper {
+  color: $shuttle-grey;
+  .kazou-textWithCta-title {
+    text-align: center;
+    font-family: OpenSans-ExtraBold, sans-serif;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -1px;
+  }
+  .kazou-container-composant {
+    padding: 0px;
+    @include large() {
+      padding: 0 100px;
+    }
+  }
+  .kazou-textWithCta-content {
+    font-family: OpenSans-Regular, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .kazou-textWithCta-cta {
+    margin: 30px auto;
+  }
+}

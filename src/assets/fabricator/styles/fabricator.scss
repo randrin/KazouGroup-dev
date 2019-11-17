@@ -9,3 +9,15 @@ $settings: (
   accent: hsl(0, 0%, 46%),
   menu-width: 14rem
 );
+
+// COMPOSANTS
+.kazou-composant {
+  padding-top: 30px;
+}
+.kazou-container-composant {
+  margin-top: 20px;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+}
