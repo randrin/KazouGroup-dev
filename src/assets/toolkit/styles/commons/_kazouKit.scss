@@ -43,34 +43,40 @@
     outline: 0;
   }
 }
-.kazou-radio-input input[type=radio]+label {
+.kazou-radio-input input[type="radio"] + label {
   position: relative;
-  // padding-left: 31px;
   cursor: pointer;
   line-height: 34px;
   margin-left: 5px;
 }
+.kazou-radio-input input[type="radio"] {
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
 .kazou-radio-input .kazou-form-label {
   display: initial;
 }
-.kazou-radio-input input[type=radio]+label::before {
+.kazou-radio-input input[type="radio"] + label::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 9px;
+  left: -27px;
+  top: 3px;
   width: 15px;
   height: 15px;
   border-radius: 100%;
   border: solid 1px $shuttle-grey;
   background-color: $white;
 }
-.kazou-radio-input input[type=radio]:checked+label::after {
+.kazou-radio-input input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 13px;
-  width: 6px;
-  height: 6px;
+  left: -23px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
   border-radius: 100%;
   background-color: $dark-orange;
 }
