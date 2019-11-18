@@ -1,4 +1,4 @@
-// COMPOSANTS
+// COMMONS COMPOSANTS
 .kazou-composant {
   padding-top: 30px;
 }
@@ -6,6 +6,80 @@
   margin-top: 20px;
 }
 
+// FORM STYLES
+.kazou-form-label {
+  font-family: OpenSans-Regular, sans-serif;
+  display: block;
+  font-size: 17px;
+  color: $shuttle-grey;
+  margin: 20px 0 10px;
+}
+.kazou-form-input {
+  width: 100%;
+  border-radius: 21px;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 15px;
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-form-textarea {
+  width: 100%;
+  border-radius: 21px;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 15px;
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-radio-input input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  line-height: 34px;
+  margin-left: 5px;
+}
+.kazou-radio-input input[type="radio"] {
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-radio-input .kazou-form-label {
+  display: initial;
+}
+.kazou-radio-input input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+}
+.kazou-radio-input input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: $dark-orange;
+}
 button[type="submit"] {
   cursor: pointer;
 }
@@ -127,7 +201,7 @@ button[type="submit"] {
   text-align: center !important;
 }
 
-// KAZOUGROUP BUTTONS
+// KAZOUGROUP BUTTONS COLORS
 .kazou-button {
   display: inline-block;
   min-width: 144px;
@@ -143,6 +217,11 @@ button[type="submit"] {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
+  @include small() {
+    width: 100%;
+    max-width: none;
+    float: none;
+  }
 }
 /**** Red Buttons ****/
 .kazou-button.red-btn {
@@ -268,7 +347,7 @@ button[type="submit"] {
     transition: all 300ms;
   }
 }
-/**** Gris Buttons ****/
+/**** Grey Buttons ****/
 .kazou-button.grey-btn {
   color: $white;
   background-color: $shuttle-grey;
@@ -300,6 +379,47 @@ button[type="submit"] {
   }
 }
 .kazou-button.grey-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+/****  Green Buttons ****/
+.kazou-button.green-btn {
+  color: $white;
+  background-color: $green;
+  border: solid 1px $green;
+  &:hover {
+    background-image: linear-gradient(to left, $timber-green, $green);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.green-outline-btn {
+  color: $green;
+  border: solid 1px $green;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $japanese-laurel-green);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.green-white-btn {
+  color: $white;
+  background-color: $green;
+  border: solid 1px $green;
+  &:hover {
+    color: $green;
+    background-color: $white;
+    border: solid 1px $green;
+  }
+}
+.kazou-button.green-transition-btn {
   color: $white;
   background-color: $fire-engine-red;
   border: solid 1px $fire-engine-red;

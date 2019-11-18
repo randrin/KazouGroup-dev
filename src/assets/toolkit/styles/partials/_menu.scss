@@ -1,4 +1,4 @@
-// menu
+// LEFT MENU
 .f-menu {
 	@include border-box;
 	position: fixed;
@@ -42,7 +42,7 @@
     font-family: OpenSans-Regular, sans-serif;
 		display: block;
 		padding: 0.33rem 1rem;
-		color: color(menu-text) !important;
+		color: $shuttle-grey !important;
 		text-decoration: none;
 		font-size: 0.875rem;
 		line-height: 1.5;
