@@ -1,7 +1,13 @@
-<select name="" id="">
-	<option value="">Option 1</option>
-	<option value="">Option 2</option>
-	<option value="">Option 3</option>
-	<option value="">Option 4</option>
-	<option value="">Option 5</option>
-</select>
+<div class="row expanded collapse">
+  <div class="medium-6 large-6 small-10 columns">
+    <label for="kazou-select-input" class="kazou-form-label">Label Name <span class="kazou-form-field-required">*</span></label>
+    <div class="kazou-select-rounded kazou-select-rounded-full">
+      <select id="kazou-select-input" name="kazou-select-input" class="kazou-select-input" required>
+        <option value="">Select</option>
+        {{#each data.select.options}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+</div>
