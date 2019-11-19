@@ -10,9 +10,99 @@
 .kazou-form-label {
   font-family: OpenSans-Regular, sans-serif;
   display: block;
-  font-size: 17px;
+  font-size: 18px;
   color: $shuttle-grey;
   margin: 20px 0 10px;
+}
+.kazou-list-unorderd {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  color: $shuttle-grey;
+  margin: 0px 0 10px 5px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 7.5px;
+    background-color: $dark-orange;
+    position: relative;
+    left: -19px;
+    top: 0px;
+  }
+}
+.kazou-container-list {
+  list-style: none;
+  counter-reset: li;
+}
+.kazou-container-list li {
+  counter-increment: li;
+}
+.kazou-list-orderd {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  color: $shuttle-grey;
+  margin: 0px 0 10px 5px;
+  &::before {
+    font-family: OpenSans-Bold, sans-serif;
+    content: counter(li);
+    display: inline-block;
+    width: 10px;
+    color: $dark-orange;
+    left: -19px;
+    position: relative;
+  }
+}
+.kazou-select-rounded {
+  position: relative;
+  font-family: OpenSans-Bold, sans-serif;
+  display: inline-block;
+  select {
+    font-family: OpenSans, sans-serif;
+    padding: 12px 50px 12px 22px;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    color: $shuttle-grey;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 21px;
+    border: solid 1px $shuttle-grey;
+    background-color: $white;
+    /* Remove drop down arrow from select for Firefox */
+    -moz-appearance: none;
+    /* Remove drop down arrow from select For Chrome */
+    -webkit-appearance: none;
+    /* Remove drop down arrow from select for IE10 */
+    &::-ms-expand {
+      display: none;
+    }
+    &::before,
+    &::after {
+      content: "";
+      width: 8px;
+      height: 0;
+      border-top: 1px solid #63666a;
+      display: block;
+      position: absolute;
+      top: 21px;
+    }
+    &::before {
+      transform: rotate(135deg);
+      right: 34px;
+    }
+    &::after {
+      transform: rotate(45deg);
+      right: 40px;
+    }
+  }
+}
+.kazou-select-rounded-full {
+  width: 100% !important;
 }
 .kazou-form-input {
   width: 100%;
@@ -22,7 +112,7 @@
   height: 40px;
   line-height: 40px;
   padding: 0 15px;
-  font-size: 15px;
+  font-size: 18px;
   &:hover {
     border-color: $dark-orange;
     box-shadow: 0 0 5px $dark-orange;
@@ -36,27 +126,34 @@
   background-color: $white;
   line-height: 40px;
   padding: 0 15px;
-  font-size: 15px;
+  font-size: 18px;
   &:hover {
     border-color: $dark-orange;
     box-shadow: 0 0 5px $dark-orange;
     outline: 0;
   }
 }
-.kazou-radio-input input[type="radio"] + label {
+.kazou-form-field-required {
+  font-family: OpenSans-Regular, sans-serif;
+  color: $fire-engine-red;
+}
+.kazou-radio-input input[type="radio"] + label,
+.kazou-checkbox-input input[type="checkbox"] + label {
   position: relative;
   cursor: pointer;
   line-height: 34px;
   margin-left: 5px;
 }
-.kazou-radio-input input[type="radio"] {
+.kazou-radio-input input[type="radio"],
+.kazou-checkbox-input input[type="checkbox"] {
   &:hover {
     border-color: $dark-orange;
-    box-shadow: 0 0 5px $dark-orange;
+    box-shadow: 0 0 15px $dark-orange;
     outline: 0;
   }
 }
-.kazou-radio-input .kazou-form-label {
+.kazou-radio-input .kazou-form-label,
+.kazou-checkbox-input .kazou-form-label {
   display: initial;
 }
 .kazou-radio-input input[type="radio"] + label::before {
@@ -80,8 +177,50 @@
   border-radius: 100%;
   background-color: $dark-orange;
 }
+.kazou-checkbox-input input + label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -27px;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  border: 1px solid $shuttle-grey;
+  background-color: $white;
+}
+.kazou-checkbox-input input:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: -23px;
+  transform: translateY(-50%);
+  background: $dark-orange;
+}
 button[type="submit"] {
   cursor: pointer;
+}
+.kazou-icon-field {
+  position: absolute;
+  height: 42px;
+  right: 45px;
+  font-size: 20px;
+}
+.kazou-container-password-input {
+  position: relative;
+  .kazou-toggle-password,
+  .kazou-toggle-password-unlock {
+    background-image: url(../images/kazou-password-lock.png);
+    background-position: 95% center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 1.25em;
+    cursor: pointer;
+  }
+}
+.kazou-container-password-input .kazou-toggle-password-unlock {
+  background-image: url(../images/kazou-password-unlock.png);
 }
 
 // KAZOUGROUP TITLE
@@ -219,7 +358,7 @@ button[type="submit"] {
   text-overflow: clip;
   @include small() {
     width: 100%;
-    max-width: none;
+    max-width: -webkit-fill-available;
     float: none;
   }
 }

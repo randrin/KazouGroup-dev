@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/toolkit/styles/toolkit.css">
   <!-- /KazouGroup Toolkit Styles -->
 </head>
+
 <body>
 
   {{#if fabricator}}
@@ -20,19 +22,19 @@
     {{> f-control-bar}}
     {{/if}}
 
-
     {% body %}
-
 
     {{#if fabricator}}
   </div>
   <script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/fabricator/scripts/f.js"></script>
   {{/if}}
-
+  <!-- JQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- /JQuery scripts -->
   <!-- toolkit scripts -->
   <script src="{{#if baseurl}}{{ baseurl }}/{{/if}}assets/toolkit/scripts/toolkit.js"></script>
   <!-- /toolkit scripts -->
-
 </body>
 
 </html>
