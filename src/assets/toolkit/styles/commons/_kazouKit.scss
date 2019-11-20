@@ -1,3 +1,22 @@
+// POSITIONS ELEMENTS COMPOSANTS: RIGHT AND/OR LEFT
+.kazou-composant-position {
+  @include large() {
+    .kazou-imageTextCarousel-wrapper {
+      .kazou-imageTextCarousel-item .row {
+        display: flex;
+        flex-flow: row-reverse;
+      }
+      .kazou-imageTextCarousel-content-item {
+        position: relative;
+      }
+      .kazou-imageTextCarousel-image {
+        padding-left: 0px;
+        padding-right: 130px;
+      }
+    }
+  }
+}
+
 // COMMONS COMPOSANTS
 .kazou-composant {
   padding-top: 30px;
@@ -295,7 +314,7 @@ button[type="submit"] {
 }
 .kazou-grey-subtitle {
   font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.6px;
   color: $shuttle-grey;
