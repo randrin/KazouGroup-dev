@@ -10,6 +10,7 @@
 
 // VENDOR
 @import "vendor/foundation";
+@import "vendor/slick-carousel/1.9.0/_slick";
 
 // PARTIALS
 @import "partials/variables";
@@ -28,4 +29,5 @@
 
 // COMPOSANTS
 @import "composants/04-kazouTextWithCta";
+@import "composants/07-kazouImageTextCarousel";
 @import "composants/28-kazouTypeCta";

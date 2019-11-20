@@ -1,0 +1,108 @@
+.kazou-imageTextCarousel-wrapper {
+  color: $shuttle-grey;
+  visibility: hidden;
+  .kazou-imageTextCarousel-title {
+    text-align: center;
+    font-family: OpenSans-ExtraBold, sans-serif;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: -1px;
+  }
+  .kazou-imageTextCarousel-container-composant {
+    position: relative;
+  }
+  .kazou-container-navigation-left,
+  .kazou-container-navigation-right {
+    @include small() {
+      display: none;
+    }
+    @include medium-large() {
+      display: none;
+    }
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 12%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .slick-slide {
+    position: relative;
+  }
+  .slick-slider {
+    line-height: 0;
+  }
+  .kazou-imageTextCarousel-image {
+    padding-left: 0px;
+    @include large() {
+      padding-left: 130px;
+    }
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  .kazou-imageTextCarousel-container-items {
+    padding-top: 30px;
+  }
+  .kazou-imageTextCarousel-content-item {
+    position: relative;
+    padding: 30px 15px;
+    top: 50%;
+    transform: translateY(0%);
+    @include large() {
+      position: absolute;
+      padding: 0px 165px 0px 115px;
+      transform: translateY(-50%);
+    }
+    .kazou-imageTextCarousel-content-subtitle {
+      font-family: OpenSans-ExtraBold, sans-serif;
+      font-size: 42px;
+      line-height: 24px;
+      letter-spacing: 0.6px;
+      padding-bottom: 20px;
+      @include small() {
+        text-align: center;
+      }
+    }
+    .kazou-imageTextCarousel-content-description {
+      font-family: OpenSans-Regular, sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 15px 0px;
+    }
+    .kazou-imageTextCarousel-content-cta {
+      margin-top: 40px;
+    }
+  }
+  .kazou-button-right {
+    position: absolute;
+    top: 334px;
+    border: solid $dark-orange;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    cursor: pointer;
+    right: 9px;
+    background-color: transparent;
+    margin-right: 20px;
+    z-index: 1;
+  }
+  .kazou-button-left {
+    position: absolute;
+    top: 334px;
+    border: solid $dark-orange;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    cursor: pointer;
+    left: 9px;
+    background-color: transparent;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left: 20px;
+    z-index: 1;
+  }
+}
