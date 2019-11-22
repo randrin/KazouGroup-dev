@@ -2,6 +2,34 @@
  * KazouGroup Toolkit Styles
  */
 
-body {
-  font-family: sans-serif;
-}
+ $settings: (
+  theme: light,
+  accent: hsl(0, 0%, 46%),
+  menu-width: 14rem
+);
+
+// VENDOR
+@import "vendor/foundation";
+@import "vendor/slick-carousel/1.9.0/_slick";
+
+// PARTIALS
+@import "partials/variables";
+@import "partials/code";
+@import "partials/color-variables";
+@import "partials/color-chips";
+@import "partials/controls";
+@import "partials/item";
+@import "partials/layout";
+@import "partials/menu";
+@import "partials/responsive";
+@import "partials/typography";
+
+// COMMONS
+@import "commons/kazouKit";
+
+// COMPOSANTS
+@import "composants/03-kazouFullWidth";
+@import "composants/04-kazouTextWithCta";
+@import "composants/07-kazouImageTextCarousel";
+@import "composants/26-kazouTypeTitle";
+@import "composants/28-kazouTypeCta";

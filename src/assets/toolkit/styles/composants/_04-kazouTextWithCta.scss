@@ -1,0 +1,14 @@
+.kazou-textWithCta-wrapper {
+  .kazou-container-composant {
+    padding: 0px 20px;
+    @include medium() {
+      padding: 0px 30px;
+    }
+    @include large() {
+      padding: 0 100px;
+    }
+  }
+  .kazou-textWithCta-cta {
+    margin: 30px auto;
+  }
+}

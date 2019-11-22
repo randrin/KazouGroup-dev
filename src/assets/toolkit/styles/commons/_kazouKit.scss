@@ -1,0 +1,636 @@
+// POSITIONS ELEMENTS COMPOSANTS: RIGHT AND/OR LEFT
+.kazou-composant-configuration {
+  @include large() {
+    .kazou-imageTextCarousel-wrapper {
+      .kazou-imageTextCarousel-item .row {
+        display: flex;
+        flex-flow: row-reverse;
+      }
+      .kazou-imageTextCarousel-content-item {
+        position: relative;
+      }
+      .kazou-imageTextCarousel-image {
+        padding-left: 0px;
+        padding-right: 130px;
+      }
+    }
+    .kazou-fullWidth-wrapper {
+      .kazou-fullWidth-gradient {
+        display: none;
+      }
+    }
+  }
+}
+
+// COMMONS COMPOSANTS
+.kazou-composant {
+  padding-top: 30px;
+}
+.kazou-container-composant {
+  margin-top: 20px;
+}
+
+// FORM STYLES
+.kazou-form-label {
+  font-family: OpenSans-Regular, sans-serif;
+  display: block;
+  font-size: 18px;
+  color: $shuttle-grey;
+  margin: 20px 0 10px;
+}
+.kazou-list-unorderd {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  color: $shuttle-grey;
+  margin: 0px 0 10px 5px;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 7.5px;
+    background-color: $dark-orange;
+    position: relative;
+    left: -19px;
+    top: 0px;
+  }
+}
+.kazou-container-list {
+  list-style: none;
+  counter-reset: li;
+}
+.kazou-container-list li {
+  counter-increment: li;
+}
+.kazou-list-orderd {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  color: $shuttle-grey;
+  margin: 0px 0 10px 5px;
+  &::before {
+    font-family: OpenSans-Bold, sans-serif;
+    content: counter(li);
+    display: inline-block;
+    width: 10px;
+    color: $dark-orange;
+    left: -19px;
+    position: relative;
+  }
+}
+.kazou-select-rounded {
+  position: relative;
+  font-family: OpenSans-Bold, sans-serif;
+  display: inline-block;
+  select {
+    font-family: OpenSans, sans-serif;
+    padding: 12px 50px 12px 22px;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    color: $shuttle-grey;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 21px;
+    border: solid 1px $shuttle-grey;
+    background-color: $white;
+    /* Remove drop down arrow from select for Firefox */
+    -moz-appearance: none;
+    /* Remove drop down arrow from select For Chrome */
+    -webkit-appearance: none;
+    /* Remove drop down arrow from select for IE10 */
+    &::-ms-expand {
+      display: none;
+    }
+    &::before,
+    &::after {
+      content: "";
+      width: 8px;
+      height: 0;
+      border-top: 1px solid #63666a;
+      display: block;
+      position: absolute;
+      top: 21px;
+    }
+    &::before {
+      transform: rotate(135deg);
+      right: 34px;
+    }
+    &::after {
+      transform: rotate(45deg);
+      right: 40px;
+    }
+  }
+}
+.kazou-select-rounded-full {
+  width: 100% !important;
+}
+.kazou-form-input {
+  width: 100%;
+  border-radius: 21px;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 18px;
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-form-textarea {
+  width: 100%;
+  border-radius: 21px;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 18px;
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 5px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-form-field-required {
+  font-family: OpenSans-Regular, sans-serif;
+  color: $fire-engine-red;
+}
+.kazou-radio-input input[type="radio"] + label,
+.kazou-checkbox-input input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+  line-height: 34px;
+  margin-left: 5px;
+}
+.kazou-radio-input input[type="radio"],
+.kazou-checkbox-input input[type="checkbox"] {
+  &:hover {
+    border-color: $dark-orange;
+    box-shadow: 0 0 15px $dark-orange;
+    outline: 0;
+  }
+}
+.kazou-radio-input .kazou-form-label,
+.kazou-checkbox-input .kazou-form-label {
+  display: initial;
+}
+.kazou-radio-input input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: solid 1px $shuttle-grey;
+  background-color: $white;
+}
+.kazou-radio-input input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -23px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: $dark-orange;
+}
+.kazou-checkbox-input input + label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -27px;
+  width: 15px;
+  height: 15px;
+  transform: translateY(-50%);
+  border: 1px solid $shuttle-grey;
+  background-color: $white;
+}
+.kazou-checkbox-input input:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: -23px;
+  transform: translateY(-50%);
+  background: $dark-orange;
+}
+button[type="submit"] {
+  cursor: pointer;
+}
+.kazou-icon-field {
+  position: absolute;
+  height: 42px;
+  right: 45px;
+  font-size: 20px;
+}
+.kazou-container-password-input {
+  position: relative;
+  .kazou-toggle-password,
+  .kazou-toggle-password-unlock {
+    background-image: url(../images/kazou-password-lock.png);
+    background-position: 95% center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    width: 1.25em;
+    cursor: pointer;
+  }
+}
+.kazou-container-password-input .kazou-toggle-password-unlock {
+  background-image: url(../images/kazou-password-unlock.png);
+}
+
+// KAZOUGROUP TITLE & HEADING
+.kazou-title {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  @include medium() {
+    font-size: 28px;
+  }
+  @include large() {
+    font-size: 32px;
+  }
+}
+.kazou-heading {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  line-height: 24px;
+  padding: 15px 0px;
+}
+
+// KAZOUGROUP SUBTITLE
+.kazou-subtitle {
+  font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+}
+
+// KAZOUGROUP COLORS
+.kazou-orange-color {
+  color: $dark-orange !important;
+}
+.kazou-grey-color {
+  color: $shuttle-grey !important;
+}
+.kazou-red-color {
+  color: $fire-engine-red !important;
+}
+.kazou-white-color {
+  color: $white !important;
+}
+.kazou-black-color {
+  color: $black !important;
+}
+.kazou-blue-color {
+  color: $blue !important;
+}
+.kazou-green-color {
+  color: $green !important;
+}
+
+// KAZOUGROUP BACKGROUND
+.kazou-zircon-grey-background {
+  background: $zircon-grey !important;
+}
+.kazou-shuttle-grey-background {
+  background: $shuttle-grey !important;
+}
+.kazou-nero-grey-background {
+  background: $nero-grey !important;
+}
+.kazou-smoke-white-background {
+  background: $smoke-white !important;
+}
+
+// KAZOUGROUP CONTENT
+.kazou-red-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $fire-engine-red;
+}
+.kazou-grey-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $shuttle-grey;
+}
+.kazou-black-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $black;
+}
+.kazou-white-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $white;
+}
+
+// KAZOUGROUP TOOLS
+.kazou-no-transform {
+  text-transform: none !important;
+}
+.kazou-uppercase {
+  text-transform: uppercase !important;
+}
+.kazou-lowercase {
+  text-transform: lowercase !important;
+}
+.kazou-text-justify {
+  text-align: justify !important;
+}
+.kazou-text-left {
+  text-align: left !important;
+}
+.kazou-text-right {
+  text-align: right !important;
+}
+.kazou-text-center {
+  text-align: center !important;
+}
+
+// KAZOUGROUP BUTTONS COLORS
+.kazou-button {
+  display: inline-block;
+  min-width: 144px;
+  max-width: 318px;
+  padding: 14px 20px;
+  border-radius: 20px;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  @include small() {
+    width: 100%;
+    max-width: -webkit-fill-available;
+    float: none;
+  }
+}
+/**** Red Buttons ****/
+.kazou-button.red-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    background-image: linear-gradient(to left, $falu-red, $fire-engine-red);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.red-outline-btn {
+  color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $coral-candy-red);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.red-white-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    border: solid 1px $fire-engine-red;
+  }
+}
+.kazou-button.red-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $coral-candy-red;
+    border: solid 1px $fire-engine-red;
+    transition: all 300ms ease;
+  }
+}
+/**** Orange Buttons ****/
+.kazou-button.orange-btn {
+  color: $white;
+  background-color: $dark-orange;
+  border: solid 1px $dark-orange;
+  &:hover {
+    background-image: linear-gradient(to left, $tangerine-orange, $dark-orange);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.orange-outline-btn {
+  color: $dark-orange;
+  border: solid 1px $dark-orange;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $peach-orange);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.orange-white-btn {
+  color: $white;
+  background-color: $dark-orange;
+  border: solid 1px $dark-orange;
+  &:hover {
+    color: $dark-orange;
+    background-color: $white;
+    border: solid 1px $dark-orange;
+  }
+}
+.kazou-button.orange-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+/**** Blue Buttons ****/
+.kazou-button.blue-btn {
+  color: $white;
+  background-color: $blue;
+  border: solid 1px $blue;
+  &:hover {
+    background-image: linear-gradient(to left, $prussian-blue, $blue);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.blue-outline-btn {
+  color: $blue;
+  border: solid 1px $blue;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $maya-blue);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.blue-white-btn {
+  color: $white;
+  background-color: $blue;
+  border: solid 1px $blue;
+  &:hover {
+    color: $blue;
+    background-color: $white;
+    border: solid 1px $blue;
+  }
+}
+.kazou-button.blue-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+/**** Grey Buttons ****/
+.kazou-button.grey-btn {
+  color: $white;
+  background-color: $shuttle-grey;
+  border: solid 1px $shuttle-grey;
+  &:hover {
+    background-image: linear-gradient(to left, $nero-grey, $shuttle-grey);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.grey-outline-btn {
+  color: $shuttle-grey;
+  border: solid 1px $shuttle-grey;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $chateau-grey);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.grey-white-btn {
+  color: $white;
+  background-color: $shuttle-grey;
+  border: solid 1px $shuttle-grey;
+  &:hover {
+    color: $shuttle-grey;
+    background-color: $white;
+    border: solid 1px $shuttle-grey;
+  }
+}
+.kazou-button.grey-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+/****  Green Buttons ****/
+.kazou-button.green-btn {
+  color: $white;
+  background-color: $green;
+  border: solid 1px $green;
+  &:hover {
+    background-image: linear-gradient(to left, $timber-green, $green);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.green-outline-btn {
+  color: $green;
+  border: solid 1px $green;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $japanese-laurel-green);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.green-white-btn {
+  color: $white;
+  background-color: $green;
+  border: solid 1px $green;
+  &:hover {
+    color: $green;
+    background-color: $white;
+    border: solid 1px $green;
+  }
+}
+.kazou-button.green-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+
+/****  Black Buttons ****/
+.kazou-button.black-btn {
+  color: $white;
+  background-color: $black;
+  border: solid 1px $black;
+  &:hover {
+    background-image: linear-gradient(to left, $snow-white, $black);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.black-outline-btn {
+  color: $black;
+  border: solid 1px $black;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $black);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.black-white-btn {
+  color: $white;
+  background-color: $black;
+  border: solid 1px $black;
+  &:hover {
+    color: $black;
+    background-color: $white;
+    border: solid 1px $black;
+  }
+}
+.kazou-button.black-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}

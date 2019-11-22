@@ -1,0 +1,19 @@
+select:
+  year:
+    - year
+    - 2016
+    - 2017
+    - 2018
+    - 2019
+  tag:
+    - taglorem ipsum dolor sit
+    - lorem
+    - ipsum
+    - dolor
+    - sit
+  options:
+    - option 1
+    - option 2
+    - option 3
+    - option 4
+    - option 5
