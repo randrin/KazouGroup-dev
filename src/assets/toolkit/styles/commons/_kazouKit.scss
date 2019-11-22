@@ -1,5 +1,5 @@
 // POSITIONS ELEMENTS COMPOSANTS: RIGHT AND/OR LEFT
-.kazou-composant-position {
+.kazou-composant-configuration {
   @include large() {
     .kazou-imageTextCarousel-wrapper {
       .kazou-imageTextCarousel-item .row {
@@ -12,6 +12,11 @@
       .kazou-imageTextCarousel-image {
         padding-left: 0px;
         padding-right: 130px;
+      }
+    }
+    .kazou-fullWidth-wrapper {
+      .kazou-fullWidth-gradient {
+        display: none;
       }
     }
   }
@@ -242,45 +247,54 @@ button[type="submit"] {
   background-image: url(../images/kazou-password-unlock.png);
 }
 
-// KAZOUGROUP TITLE
-.kazou-orange-title {
+// KAZOUGROUP TITLE & HEADING
+.kazou-title {
   font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 24px;
   letter-spacing: 1px;
-  color: $dark-orange;
+  @include medium() {
+    font-size: 28px;
+  }
+  @include large() {
+    font-size: 32px;
+  }
 }
-.kazou-red-title {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 32px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  color: $fire-engine-red;
-}
-.kazou-grey-title {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 32px;
-  line-height: 24px;
-  letter-spacing: 1px;
-  color: $shuttle-grey;
-}
-.kazou-orange-heading {
+.kazou-heading {
   font-family: OpenSans-ExtraBold, sans-serif;
   line-height: 24px;
   padding: 15px 0px;
-  color: $dark-orange;
 }
-.kazou-red-heading {
+
+// KAZOUGROUP SUBTITLE
+.kazou-subtitle {
   font-family: OpenSans-ExtraBold, sans-serif;
+  font-size: 18px;
   line-height: 24px;
-  padding: 15px 0px;
-  color: $fire-engine-red;
+  letter-spacing: 0.6px;
 }
-.kazou-grey-heading {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  line-height: 24px;
-  padding: 15px 0px;
-  color: $shuttle-grey;
+
+// KAZOUGROUP COLORS
+.kazou-orange-color {
+  color: $dark-orange !important;
+}
+.kazou-grey-color {
+  color: $shuttle-grey !important;
+}
+.kazou-red-color {
+  color: $fire-engine-red !important;
+}
+.kazou-white-color {
+  color: $white !important;
+}
+.kazou-black-color {
+  color: $black !important;
+}
+.kazou-blue-color {
+  color: $blue !important;
+}
+.kazou-green-color {
+  color: $green !important;
 }
 
 // KAZOUGROUP BACKGROUND
@@ -297,29 +311,6 @@ button[type="submit"] {
   background: $smoke-white !important;
 }
 
-// KAZOUGROUP SUBTITLE
-.kazou-orange-subtitle {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.6px;
-  color: $dark-orange;
-}
-.kazou-red-subtitle {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.6px;
-  color: $fire-engine-red;
-}
-.kazou-grey-subtitle {
-  font-family: OpenSans-ExtraBold, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.6px;
-  color: $shuttle-grey;
-}
-
 // KAZOUGROUP CONTENT
 .kazou-red-content {
   font-family: OpenSans-Regular, sans-serif;
@@ -334,6 +325,20 @@ button[type="submit"] {
   line-height: 24px;
   padding: 15px 0px;
   color: $shuttle-grey;
+}
+.kazou-black-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $black;
+}
+.kazou-white-content {
+  font-family: OpenSans-Regular, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 0px;
+  color: $white;
 }
 
 // KAZOUGROUP TOOLS
@@ -578,6 +583,48 @@ button[type="submit"] {
   }
 }
 .kazou-button.green-transition-btn {
+  color: $white;
+  background-color: $fire-engine-red;
+  border: solid 1px $fire-engine-red;
+  &:hover {
+    color: $fire-engine-red;
+    background-color: $white;
+    transition: all 300ms;
+  }
+}
+
+/****  Black Buttons ****/
+.kazou-button.black-btn {
+  color: $white;
+  background-color: $black;
+  border: solid 1px $black;
+  &:hover {
+    background-image: linear-gradient(to left, $snow-white, $black);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.black-outline-btn {
+  color: $black;
+  border: solid 1px $black;
+  background: $white;
+  &:hover {
+    background-image: linear-gradient(to right, $white, $black);
+    border: 0;
+    padding: 15px 21px;
+  }
+}
+.kazou-button.black-white-btn {
+  color: $white;
+  background-color: $black;
+  border: solid 1px $black;
+  &:hover {
+    color: $black;
+    background-color: $white;
+    border: solid 1px $black;
+  }
+}
+.kazou-button.black-transition-btn {
   color: $white;
   background-color: $fire-engine-red;
   border: solid 1px $fire-engine-red;

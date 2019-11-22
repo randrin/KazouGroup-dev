@@ -1,0 +1,55 @@
+.kazou-fullWidth-wrapper {
+  position: relative;
+  .kazou-fullWidth-image {
+    object-fit: fill;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    height: 400px;
+    @include small() {
+      position: relative;
+      height: auto;
+    }
+  }
+  .kazou-fullWidth-gradient {
+    @include small() {
+      display: none;
+    }
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.53));
+    position: absolute;
+    bottom: 0;
+    width: 1000px;
+    height: 400px;
+    z-index: -1;
+  }
+  .kazou-fullWidth-title {
+    
+    position: relative;
+    top: 30px;
+  }
+  .kazou-fullWidth-content {
+    margin: 0px 10px;
+    @include medium-large() {
+      margin: 0px 0px 0px 80px;
+    }
+    @include large() {
+      margin: 0px 0px 0px 150px;
+    }
+    .kazou-fullWidth-content-title {
+      padding: 80px 0px 30px;
+      @include large() {
+        padding: 100px 0px 30px;
+      }
+    }
+    .kazou-fullWidth-content-content {
+      padding: 0px 0px 30px;
+      width: 360px;
+      @include small() {
+        width: 100%;
+      }
+    }
+    .kazou-fullWidth-content-cta {
+      padding-bottom: 50px;
+    }
+  }
+}

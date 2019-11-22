@@ -2,7 +2,7 @@
 
 {{#if items}}
 	<div class="f-item-heading-group">
-		<h2 class="kazou-red-subtitle f-item-heading" data-f-toggle="labels">{{name}}</h2>
+		<h2 class="kazou-subtitle kazou-red-color f-item-heading" data-f-toggle="labels">{{name}}</h2>
 	</div>
 	{{#each items}}
 		<div class="f-item-group" id="{{@key}}">
@@ -14,7 +14,7 @@
 	{{/each}}
 {{else}}
 	<div class="f-item-heading-group" data-f-toggle="labels">
-		<h2 class="kazou-red-subtitle f-item-heading">{{name}}</h2>
+		<h2 class="kazou-subtitle kazou-red-color f-item-heading">{{name}}</h2>
 		{{> f-item-controls}}
 	</div>{{> f-item-content this}}
 {{/if}}
