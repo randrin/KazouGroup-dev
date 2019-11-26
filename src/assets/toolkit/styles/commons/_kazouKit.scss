@@ -386,6 +386,7 @@ button[type="submit"] {
     float: none;
   }
 }
+
 /**** Red Buttons ****/
 .kazou-button.red-btn {
   color: $white;
@@ -418,16 +419,43 @@ button[type="submit"] {
   }
 }
 .kazou-button.red-transition-btn {
-  color: $white;
+  color: $fire-engine-red;
   background-color: $fire-engine-red;
   border: solid 1px $fire-engine-red;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
-    background-color: $coral-candy-red;
+    color: $white;
+    background-color: $fire-engine-red;
     border: solid 1px $fire-engine-red;
-    transition: all 300ms ease;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $fire-engine-red;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $white;
+    border: solid 1px $fire-engine-red;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
+
 /**** Orange Buttons ****/
 .kazou-button.orange-btn {
   color: $white;
@@ -460,15 +488,43 @@ button[type="submit"] {
   }
 }
 .kazou-button.orange-transition-btn {
-  color: $white;
-  background-color: $fire-engine-red;
-  border: solid 1px $fire-engine-red;
+  color: $dark-orange;
+  background-color: $dark-orange;
+  border: solid 1px $dark-orange;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
+    color: $white;
+    background-color: $dark-orange;
+    border: solid 1px $dark-orange;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $dark-orange;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-color: $white;
-    transition: all 300ms;
+    border: solid 1px $dark-orange;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
+
 /**** Blue Buttons ****/
 .kazou-button.blue-btn {
   color: $white;
@@ -501,15 +557,43 @@ button[type="submit"] {
   }
 }
 .kazou-button.blue-transition-btn {
-  color: $white;
-  background-color: $fire-engine-red;
-  border: solid 1px $fire-engine-red;
+  color: $blue;
+  background-color: $blue;
+  border: solid 1px $blue;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
+    color: $white;
+    background-color: $blue;
+    border: solid 1px $blue;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $blue;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-color: $white;
-    transition: all 300ms;
+    border: solid 1px $blue;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
+
 /**** Grey Buttons ****/
 .kazou-button.grey-btn {
   color: $white;
@@ -542,15 +626,43 @@ button[type="submit"] {
   }
 }
 .kazou-button.grey-transition-btn {
-  color: $white;
-  background-color: $fire-engine-red;
-  border: solid 1px $fire-engine-red;
+  color: $shuttle-grey;
+  background-color: $shuttle-grey;
+  border: solid 1px $shuttle-grey;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
+    color: $white;
+    background-color: $shuttle-grey;
+    border: solid 1px $shuttle-grey;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $shuttle-grey;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-color: $white;
-    transition: all 300ms;
+    border: solid 1px $shuttle-grey;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
+
 /****  Green Buttons ****/
 .kazou-button.green-btn {
   color: $white;
@@ -583,13 +695,40 @@ button[type="submit"] {
   }
 }
 .kazou-button.green-transition-btn {
-  color: $white;
-  background-color: $fire-engine-red;
-  border: solid 1px $fire-engine-red;
+  color: $green;
+  background-color: $green;
+  border: solid 1px $green;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
+    color: $white;
+    background-color: $green;
+    border: solid 1px $green;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $green;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-color: $white;
-    transition: all 300ms;
+    border: solid 1px $green;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
 
@@ -625,12 +764,39 @@ button[type="submit"] {
   }
 }
 .kazou-button.black-transition-btn {
-  color: $white;
-  background-color: $fire-engine-red;
-  border: solid 1px $fire-engine-red;
+  color: $black;
+  background-color: $black;
+  border: solid 1px $black;
+  position: relative;
+  -webkit-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  z-index: 0;
   &:hover {
-    color: $fire-engine-red;
+    color: $white;
+    background-color: $black;
+    border: solid 1px $black;
+    &::before {
+      width: 0%;
+      color: $white;
+      background-color: $black;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    margin: -1px 0px 0px -1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     background-color: $white;
-    transition: all 300ms;
+    border: solid 1px $black;
+    -webkit-transition: all 1000ms;
+    -o-transition: all 1000ms;
+    transition: all 1000ms;
   }
 }
