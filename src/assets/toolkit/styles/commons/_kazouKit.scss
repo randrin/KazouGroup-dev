@@ -341,6 +341,129 @@ button[type="submit"] {
   color: $white;
 }
 
+// KAZOUGROUP LINKS
+.kazou-subtitle {
+  .kazou-right-chevron-link::after {
+    content: "";
+    position: relative;
+    left: 3px;
+    top: -4px;
+    transition: left 300ms;
+    border: solid;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .kazou-left-chevron-link::before {
+    content: "";
+    position: relative;
+    left: 0px;
+    top: -4px;
+    transition: left 300ms;
+    border: solid;
+    border-width: 2px 0px 0px 2px;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  &:hover {
+    .kazou-right-chevron-link::after {
+      left: 15px;
+      transition: left 300ms;
+    }
+    .kazou-left-chevron-link::before {
+      left: -15px;
+      transition: left 300ms;
+    }
+  }
+}
+.kazou-arrow-style {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+  .kazou-arrow-body {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    transition: width 300ms;
+  }
+  .kazou-arrow-header {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transform: rotate(-45deg);
+    margin-top: -8.29px;
+    left: 40px;
+    top: 20px;
+    transition: left 300ms;
+  }
+  &:hover {
+    .kazou-arrow-body {
+      width: 75px;
+      transition: width 300ms;
+    }
+    .kazou-arrow-header {
+      left: 55px;
+      transition: left 300ms;
+    }
+  }
+}
+
+// KAZOUGROUP ARROW BODY & HEADER COLORS
+.kazou-orange-arrow-body {
+  border-bottom: solid 2px $dark-orange !important;
+}
+.kazou-grey-arrow-body {
+  border-bottom: solid 2px $shuttle-grey !important;
+}
+.kazou-red-arrow-body {
+  border-bottom: solid 2px $fire-engine-red !important;
+}
+.kazou-white-arrow-body {
+  border-bottom: solid 2px $white !important;
+}
+.kazou-black-arrow-body {
+  border-bottom: solid 2px $black !important;
+}
+.kazou-blue-arrow-body {
+  border-bottom: solid 2px $blue !important;
+}
+.kazou-green-arrow-body {
+  border-bottom: solid 2px $green !important;
+}
+.kazou-orange-arrow-header {
+  border-right: solid 2px $dark-orange !important;
+  border-bottom: solid 2px $dark-orange !important;
+}
+.kazou-grey-arrow-header {
+  border-right: solid 2px $shuttle-grey !important;
+  border-bottom: solid 2px $shuttle-grey !important;
+}
+.kazou-red-arrow-header {
+  border-right: solid 2px $fire-engine-red !important;
+  border-bottom: solid 2px $fire-engine-red !important;
+}
+.kazou-white-arrow-header {
+  border-right: solid 2px $white !important;
+  border-bottom: solid 2px $white !important;
+}
+.kazou-black-arrow-header {
+  border-right: solid 2px $black !important;
+  border-bottom: solid 2px $black !important;
+}
+.kazou-blue-arrow-header {
+  border-right: solid 2px $blue !important;
+  border-bottom: solid 2px $blue !important;
+}
+.kazou-green-arrow-header {
+  border-right: solid 2px $green !important;
+  border-bottom: solid 2px $green !important;
+}
+
 // KAZOUGROUP TOOLS
 .kazou-no-transform {
   text-transform: none !important;
