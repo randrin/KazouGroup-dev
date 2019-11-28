@@ -2,12 +2,6 @@
  * KazouGroup Toolkit Styles
  */
 
- $settings: (
-  theme: light,
-  accent: hsl(0, 0%, 46%),
-  menu-width: 14rem
-);
-
 // VENDOR
 @import "vendor/foundation";
 @import "vendor/slick-carousel/1.9.0/_slick";
@@ -31,5 +25,6 @@
 @import "composants/03-kazouFullWidth";
 @import "composants/04-kazouTextWithCta";
 @import "composants/07-kazouImageTextCarousel";
+@import "composants/14-kazouDoubleImages";
 @import "composants/26-kazouTypeTitle";
 @import "composants/28-kazouTypeCta";
