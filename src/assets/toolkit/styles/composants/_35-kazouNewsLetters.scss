@@ -1,0 +1,46 @@
+.kazou-newsLetters-wrapper {
+    .kazou-newsLetters-form {
+        @include small() {
+            display: flex;
+            flex-flow: wrap;
+        }
+    }
+    .kazou-newsLetters-content {
+        padding: 20px;
+        @include large() {
+            padding: 50px;
+        }
+        .kazou-newsLetters-title {
+            @include small() {
+                text-align: center !important;
+            }
+        }
+        .kazou-newsLetters-subtitle {
+            @include small() {
+                text-align: center !important;
+            }
+            padding: 20px 0px;
+        }
+    }
+    .kazou-newsLetters-content-input {
+        padding: 20px 0px 20px;
+        @include large() {
+            padding: 50px 0px 20px;
+        }
+        input {
+            background: 0 0;
+        }
+        .kazou-form-input {
+            width: -webkit-fill-available;
+        }
+    }
+    .kazou-checkbox-input {
+        @include medium() {
+            width: max-content;
+        }
+        label a {
+            text-decoration: underline;
+            color: inherit;
+        }
+    }
+}
